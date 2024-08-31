@@ -11,8 +11,8 @@ data "aws_iam_policy_document" "s3-bucket" {
     effect  = "Allow"
     actions = ["s3:*"]
     resources = [
-      aws_s3_bucket.obsidian-bucket.bucket,
-      "${aws_s3_bucket.obsidian-bucket.bucket}/*"
+      aws_s3_bucket.obsidian-bucket.arn,
+      "${aws_s3_bucket.obsidian-bucket.arn}/*"
     ]
   }
 }
